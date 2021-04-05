@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romeo client's subscribe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="index.css">
+<body>
+    <nav class="bg-dark" id="header-text">
+        <h1 class="text-center pt-5 text-white pb-4">𝐎𝐧𝐥𝐢𝐧𝐞 𝐌𝐐𝐓𝐓 𝐖𝐞𝐛 𝐂𝐥𝐢𝐞𝐧𝐭</h1>
+    </nav>
+    <div class="container-fluid head">
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="card my-3" id="broker-body">
+                    <div class="card-header bg-success" id="header-brok">
+                        <h2>𝐁𝐫𝐨𝐤𝐞𝐫</h2>
+                    </div>
+                    <div class="card-body">
+                        <label style="color: white; font-size: 20px;">Address: </label>
+                        <input type="text" id="add-brooker" class="form-control" value="wss://test.mosquitto.org:8081/mqtt">
+                        <button id="connect-btn" class="btn btn-warning my-3" value="">𝐂𝐨𝐧𝐧𝐞𝐜𝐭</button>
+                        <button id="dis-button" class="btn btn-danger my-3" value="">𝐃𝐢𝐬𝐜𝐨𝐧𝐧𝐞𝐜𝐭</button><br>
+                        <label style="color: white; font-size: 20px;">Status: </label>
+                        <input type="text" id="stat-brooker" class="form-control" value="Press Connect!">
+                    </div>
+                    <div class="card-header bg-primary" id="brok-msg">
+                        <h5>𝐈𝐧𝐜𝐨𝐦𝐢𝐧𝐠 𝐌𝐞𝐬𝐬𝐚𝐠𝐞𝐬</h5>
+                    </div>
+                    <table class="table btn-danger" id="brooker-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Topic</th>
+                                <th scope="col">Payload</th>
+                                <th scope="col">Time Stamp</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card my-3" id="pub-body">
+                    <div class="card-header bg-success" id="header-pub">
+                        <h2>𝐏𝐮𝐛𝐥𝐢𝐬𝐡</h2>
+                    </div>
+                    <div class="card-body">
+                        <label style="color: white; font-size: 20px;">Topic: </label>
+                        <input type="text" id="topic-pub" class="form-control" value="cloud">
+                        <label style="color: white; font-size: 20px;">Payload: </label>
+                        <input type="text" id="input-pub" class="form-control" value="strife">
+                        <button id="pub-btn" class="btn btn-warning my-3" value="">𝐏𝐮𝐛𝐥𝐢𝐬𝐡</button>
+
+                    </div>
+                    <div class="card-header bg-primary" id="pub-msg">
+                        <h5>𝐏𝐮𝐛𝐥𝐢𝐬𝐡𝐞𝐝 𝐌𝐞𝐬𝐬𝐚𝐠𝐞𝐬</h5>
+                    </div>
+                    <table class="table btn-danger" id="pub-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Topic</th>
+                                <th scope="col">Payload</th>
+                                <th scope="col">Time Stamp</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div style="padding-bottom: 0px;" class="card my-3" id="sub-body">
+                    <div class="card-header bg-success" id="header-sub">
+                        <h2>𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞</h2>
+                    </div>
+                    <div class="card-body">
+                        <label style="color: white;font-size: 20px;">Topic: </label>
+                        <input type="text" id="sub-topic" class="form-control" value="cloud">
+                        <button id="sub-button" class="btn btn-warning my-5" value="">𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞</button>
+                    </div>
+                    <div class="card-header bg-primary" id="sub-msg">
+                        <h5>𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞𝐝 𝐌𝐞𝐬𝐬𝐚𝐠𝐞𝐬</h5>
+                    </div>
+                    <table class="table btn-danger pb-2" id="sub-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Topic</th>
+                                <th scope="col">Time Stamp</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+</body>
+<script src="browserMqtt.js"></script>
+<script src="index.js"></script>
+
+</html>

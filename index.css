@@ -1,0 +1,215 @@
+body {
+    background-image: url('https://images.template.net/wp-content/uploads/2016/02/03062858/Download-Background-Wood-Grain-Structure-for-Free.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+#pub-msg {
+    text-align: center;
+    font-weight: bold;
+}
+
+#sub-msg {
+    text-align: center;
+    font-weight: bold;
+
+}
+
+#brok-msg {
+    text-align: center;
+    font-weight: bold;
+}
+
+#header-brok {
+    text-align: center;
+    font-weight: bold;
+}
+
+#header-sub {
+    text-align: center;
+    font-weight: bold;
+}
+
+#header-pub {
+    text-align: center;
+    font-weight: bold;
+}
+
+#pub-body {
+    background-color: black;
+}
+#sub-body {
+    background-color: black;
+}
+#broker-body {
+    background-color: black;
+}
+
+input[type="text"] {
+    background-color: grey;
+    color: black;
+    font-size: 20px;
+}
+/* subscribe button */
+#sub-button {
+    position: relative;
+    background-color: #f39c12;
+    border: none;
+    padding: 15px;
+    width: 180px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#sub-button:hover{
+   background:green;
+   box-shadow:0px 2px 10px 5px #97B1BF;
+   color: white;
+}
+
+#sub-button:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#sub-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+/* publish button */
+#pub-btn {
+    position: relative;
+    background-color: #f39c12;
+    border: none;
+    padding: 12px;
+    width: 180px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 20px;
+}
+
+#pub-btn:hover{
+    background:green;
+    box-shadow:0px 2px 10px 5px #97B1BF;
+    color: white;
+}
+
+#pub-btn:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+#pub-btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+/* connect button */
+#connect-btn {
+    position: relative;
+    background-color: #f39c12;
+    border: none;
+    padding: 12px;
+    width: 180px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 20px;
+    color: black;
+}
+
+#connect-btn:hover{
+    background:green;
+    box-shadow:0px 2px 10px 5px #97B1BF;
+    color: white;
+}
+
+#connect-btn:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+#connect-btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+/* Disconnect button */
+#dis-button {
+    position: relative;
+    background-color: #f39c12;
+    border: none;
+    padding: 12px;
+    width: 180px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 20px;
+    color: black;
+}
+
+#dis-button:hover{
+    background:green;
+    box-shadow:0px 2px 10px 5px #97B1BF;
+    color: white;
+}
+
+#dis-button:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+#dis-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
